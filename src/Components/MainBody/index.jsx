@@ -47,8 +47,7 @@ function MainBody(){
             return ;
         }
         let str=e.target.value;
-        console.log(role,'role');
-        console.log(str);
+        str=str.toLowerCase();
         let arr=positions.filter((res)=>{
             let s=res.toLowerCase();
             return s.includes(str);
@@ -66,6 +65,7 @@ function MainBody(){
             return ;
         }
         let str=e.target.value;
+        str=str.toLowerCase();
         let arr=countries.filter((res)=>{
             let s=res.toLowerCase();
             return s.includes(str);
@@ -82,6 +82,7 @@ function MainBody(){
             return ;
         }
         let str=e.target.value;
+        str=str.toLowerCase();
         let arr=companies.filter((res)=>{
             let s=res.toLowerCase();
             return s.includes(str);
@@ -98,6 +99,7 @@ function MainBody(){
             return ;
         }
         let str=e.target.value;
+        str=str.toLowerCase();
         let arr=aggregates.filter((res)=>{
             let s=res.toLowerCase();
             return s.includes(str);
@@ -114,6 +116,7 @@ function MainBody(){
             return ;
         }
         let str=e.target.value;
+        str=str.toLowerCase();
         let arr=groupings.filter((res)=>{
             let s=res.toLowerCase();
             return s.includes(str);
@@ -196,6 +199,12 @@ function MainBody(){
     }
 
     const searchQuery3=()=>{
+        setOpenBox2(false);
+        setOpenBox3(false);
+        setOpenBox4(false);
+        setOpenBox5(false);
+        setOpenBox6(false);
+        setOpenBox7(false);
         let len=position.length+openings.length+company.length+country.length+grouping.length+agg.length;
         if(len===0){
             setJobs(jsonObj.jobs);
