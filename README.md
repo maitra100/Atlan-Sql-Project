@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# SQL Query Viewer and Data Display (Dummy project for an assessment )
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Basic Overview
 
-## Available Scripts
+This tool empowers users to effortlessly retrieve and visualize data from their database using SQL queries. The sample data pertains to job openings, including details such as position, openings, country, and company. Enter queries according to your needs to obtain the desired output. There are three methods for entering queries:
 
-In the project directory, you can run:
+1) Textarea: Users can input their desired SQL queries in a provided textarea. Upon pressing the search button, the data will be presented in a table format.
 
-### `npm start`
+2) Dropdown Menu: A dropdown menu contains pre-written SQL queries. Users can select an SQL query from the dropdown and press the search button to retrieve the desired table.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3) Dropdown Bars: Various dropdown bars correspond to common SQL query statements like GROUP BY, Aggregate functions, and ORDER BY openings. Dropdowns are also available for attributes such as Position, Company, and Country, allowing data retrieval based on selected values.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Caution
+Please be aware that the SQL queries and table data reflected after querying are not accurate; they are solely for demonstration purposes. No query validation or syntax validation is implemented.
 
-### `npm test`
+## Frameworks
+This project employs React.js as the JavaScript framework, in addition to HTML and CSS. No other major plugins or frameworks have been utilized.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Page Load Time
 
-### `npm run build`
+The page load time of the deployed application is approximately 1 second during the initial load. Subsequent loads are nearly instantaneous. This measurement was determined using a stopwatch initiated immediately after accessing the endpoint in the web browser.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Optimisations
+To ensure a seamless user experience and prevent potential crashes, the project incorporates the following optimizations:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ 1) Pagination: Given the potential copiousness of retrieved data, pagination is implemented to display only 6 data entries at a time. Rendering all data simultaneously might overwhelm the website.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ 2) Dropdown menus offer predefined SQL query components. These filters can assist users in generating precise queries. Users can utilize the generated queries from these dropdowns within the textarea, particularly if implementing multiple nested queries.
 
-### `npm run eject`
+ ## Steps to Run locally
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+ 1) Clone the repo.
+ 2) npm start
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ Key Observation: If you want to get all the data without any sort of filter, just empty any of the section and press search button.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ ## Deployed link
+ Link: https://64ee286112adfc007162beb2--imaginative-conkies-c65053.netlify.app
